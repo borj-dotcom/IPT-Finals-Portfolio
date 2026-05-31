@@ -1,0 +1,120 @@
+.resumeActions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.resumeDoc {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 56px;
+  margin-bottom: 80px;
+}
+
+.docHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 36px;
+}
+
+.docName {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.docTitle { font-size: 14px; color: var(--accent); font-weight: 500; letter-spacing: 0.05em; }
+
+.docContact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.docContact span { font-size: 12px; color: var(--text-muted); }
+
+.section { margin-bottom: 36px; }
+
+.sectionTitle {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionBody {}
+
+.summary { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+
+.entry { margin-bottom: 20px; }
+.entry:last-child { margin-bottom: 0; }
+
+.entryHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.entryTitle { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.entrySub { font-size: 13px; color: var(--accent); }
+.entryDate { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+
+.entryItems { list-style: none; display: flex; flex-direction: column; gap: 4px; padding-left: 16px; }
+
+.entryItems li {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  position: relative;
+}
+
+.entryItems li::before {
+  content: '▸';
+  position: absolute;
+  left: -16px;
+  color: var(--accent-3);
+  font-size: 10px;
+  top: 3px;
+}
+
+.skillsGrid { display: flex; flex-direction: column; gap: 8px; }
+
+.skillRow { display: flex; gap: 16px; font-size: 13px; }
+.skillLabel { font-weight: 600; color: var(--text); min-width: 100px; flex-shrink: 0; }
+.skillValue { color: var(--text-muted); }
+
+.awardsList { list-style: none; display: flex; flex-direction: column; gap: 6px; padding-left: 16px; }
+
+.awardsList li {
+  font-size: 13px;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.awardsList li::before {
+  content: '★';
+  position: absolute;
+  left: -16px;
+  color: var(--accent);
+  font-size: 10px;
+  top: 2px;
+}
+
+@media (max-width: 640px) {
+  .resumeDoc { padding: 28px 20px; }
+  .docHeader { flex-direction: column; gap: 16px; }
+  .docContact { text-align: left; }
+  .entryHead { flex-direction: column; gap: 4px; }
+}
